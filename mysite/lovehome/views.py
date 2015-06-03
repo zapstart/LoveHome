@@ -16,11 +16,23 @@ def add_blog(request):
         _blog_text.save()
         return HttpResponseRedirect(reverse('lovehome:front_page'))
     else:
-        return render(request, 'lovehome/edit_blog.html')
+        return render(request, 'lovehome/add_blog.html')
+
+def edit_blog(request, page_id):
+    if request.method == 'POST':
+        _blog_text              = blog_text.objects.get(pk=page_id)
+        _blog_text.title        = request.POST['title']
+        _blog_text.blog_content = request.POST['blog']
+        _blog_text.save()
+        return HttpResponseRedirect(reverse('lovehome:front_page'))
+    else:
+        _blog_data = blog_text.objects.get(pk=page_id)
+        return render(request, 'lovehome/edit_blog.html', {'blog_data' : _blog_data})
+
 
 def show_blog(request, page_id):
     _page_id   = page_id
     _blog_data = blog_text.objects.get(pk=_page_id)
-    return render(request, 'lovehome/show_blog.html', {'blog' : _blog_data})
+    return render(request, 'lovehome/show_blog.html', {'blog_data' : _blog_data})
       
     
