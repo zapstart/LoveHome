@@ -3,16 +3,17 @@
     </head>
     <body>
         <form method="post">
-        <h1 align="center"><b><font size="7">DRT Love ZCC</font></b></h1>
+        <h1 align="center"><b><font size="7">豆豆 LOVE 琛琛</font></b></h1>
             {% if blog_data %} 
-                <br>
-                <br>
+                <font size="5"><a href="{% url 'lovehome:add_blog' %}" style="text-decoration:none">New Blog</a></font>
+                <hr /> 
                 {% for blog in blog_data %} 
                     <label>
-                        <div><b><font size="5"><a href="/home/page/{{ blog.id }}">{{ blog.title}}</font></a></b></div> 
+                        <div>
+                            <b><font size="5"><a href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</font></a></b>
+                            &nbsp;<font size="3">(Created at {{blog.b_created_time}})</font>
+                        </div> 
                     </label> 
-                    <br>
-                    <br>
                 {% endfor %}
             {% else %}
                 <P>Sorry, there is no blog right now!!!</P>

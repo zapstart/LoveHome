@@ -1,12 +1,12 @@
 <html>
     <head>
         <body>
-            <h1 align="center"><b><font size="7">DRT Love ZCC</font></b></h1>
-            <br>
-            <br>
+            <h1 align="center"><b><font size="7">豆豆 LOVE 琛琛</font></b></h1>
+            <font size="5"><a href="{% url 'lovehome:edit_blog' blog_data.id %}" style="text-decoration:none">Edit Blog</a></font>
+            <hr /> 
             <label>
-                <div><h2 align="center"><b><font size="5">{{ blog.title }}</font></b></h2></div>
-                <div><font size="5">{{ blog.blog_content }}</font></div>
+                <div><h2 align="center"><b><font size="5">{{ blog_data.title }}</font></b></h2></div>
+                <div><font size="5">{{ blog_data.blog_content }}</font></div>
             </label>
         </body>
     </head>
