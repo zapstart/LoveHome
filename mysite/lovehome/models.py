@@ -6,5 +6,3 @@ class blog_text(models.Model):
     b_update_time  = models.TimeField(auto_now = True, blank = True)
     blog_content   = models.TextField(blank = True)
     
-    def __str__(self):
-        return self.name
