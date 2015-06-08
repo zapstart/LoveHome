@@ -28,11 +28,11 @@ def edit_blog(request, page_id):
     else:
         _blog_data = blog_text.objects.get(pk=page_id)
         return render(request, 'lovehome/edit_blog.html', {'blog_data' : _blog_data})
-
+<html>
+</html>
 
 def show_blog(request, page_id):
     _page_id   = page_id
     _blog_data = blog_text.objects.get(pk=_page_id)
     return render(request, 'lovehome/show_blog.html', {'blog_data' : _blog_data})
       
-    

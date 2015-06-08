@@ -1,0 +1,40 @@
+/*front_page.html, edit_blog.html, add_blog.html*/
+h1 {
+    color     : green;
+    font-size : 40px;
+}
+
+/*front_page.html*/
+body {
+    background: white url("bg_gray.gif") right bottom;
+}
+
+.add_blog {
+    color           : green; 
+    text-decoration : none;
+    font-size       : 25px;
+}
+
+.blog_title {
+    color           : green; 
+    font-size       : 20px;
+    text-decoration : none;
+}
+
+#title {
+    color           : green; 
+    font-size       : 18px;
+}
+
+/*edit_blog.html*/
+#edit_blog {
+    color     : blue;
+    font-size : 18px;
+}
+
+/*add_blog.html*/
+#new_blog {
+    color     : blue;
+    font-size : 18px;
+}
+
