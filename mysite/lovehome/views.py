@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 
@@ -28,11 +28,23 @@ def edit_blog(request, page_id):
     else:
         _blog_data = blog_text.objects.get(pk=page_id)
         return render(request, 'lovehome/edit_blog.html', {'blog_data' : _blog_data})
-<html>
-</html>
+
 
 def show_blog(request, page_id):
-    _page_id   = page_id
-    _blog_data = blog_text.objects.get(pk=_page_id)
+    _blog_data = get_object_or_404(blog_text, pk=page_id)
     return render(request, 'lovehome/show_blog.html', {'blog_data' : _blog_data})
-      
+
+def delete_blog(request, page_id):
+    get_object_or_404(blog_text, pk=page_id).delete()
+    return HttpResponseRedirect(reverse('lovehome:front_page'))
+    
+
+
+
+
+
+
+
+
+
+

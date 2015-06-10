@@ -4,14 +4,13 @@
             <form>
             <h1 align="center"><b><font size="7">豆豆 LOVE 琛琛</font></b></h1>
             <div>
-                <font size="5"><a href="{% url 'lovehome:front_page' %}"              style="text-decoration:none">Home&nbsp;&nbsp;</a></font>
-                <font size="5"><a href="{% url 'lovehome:edit_blog'  blog_data.id %}" style="text-decoration:none">Edit</a></font>
+                <font size="5"><a id="home"  href="{% url 'lovehome:front_page' %}"              style="text-decoration:none">Home&nbsp;&nbsp;</a></font>
+                <font size="5"><a id="edit"  href="{% url 'lovehome:edit_blog'  blog_data.id %}" style="text-decoration:none">Edit</a></font>
+                <font size="5"><a id="delet" href="{% url 'lovehome:delete_blog'  blog_data.id %}" style="text-decoration:none">Delete</a></font>
             </div>
             <hr /> 
-            <label>
-                <div><h2 align="center"><b><font size="5">{{ blog_data.title }}</font></b></h2></div>
-                <div><font size="5">{{ blog_data.blog_content }}</font></div>
-            </label>
+            <div><h2 align="center"><b><font size="5">{{ blog_data.title }}</font></b></h2></div>
+            <div><font size="5">{{ blog_data.blog_content|safe }}</font></div>
             </form>
         </body>
     </head>
