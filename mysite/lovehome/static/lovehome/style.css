@@ -1,18 +1,25 @@
-/*front_page.html, edit_blog.html, add_blog.html*/
+/*front_page.html, edit_blog.html, add_blog.html, show_blog.html*/
 h1 {
-    color     : green;
-    font-size : 40px;
+    color      : green;
+    font-size  : 40px;
+    text-align : center;
 }
 
-/*front_page.html*/
 body {
     background: white url("bg_gray.gif") right bottom;
 }
 
-.add_blog {
+/*front_page.html, show_blog.html*/
+.menu{
+    font-family     : "Times New Roman"; 
     color           : green; 
     text-decoration : none;
     font-size       : 25px;
+}
+
+/*front_page.html*/
+.top_picture {
+    height : 128px;  
 }
 
 .blog_title {
@@ -21,20 +28,46 @@ body {
     text-decoration : none;
 }
 
-#title {
+.created_time{
     color           : green; 
     font-size       : 18px;
 }
 
 /*edit_blog.html*/
-#edit_blog {
+.edit_blog_1 {
+    font-family : "Times New Roman"; 
+    color     : blue;
+    font-size : 18px;
+}
+
+.edit_blog_2 {
+    font-family : "Times New Roman"; 
     color     : blue;
     font-size : 18px;
 }
 
 /*add_blog.html*/
-#new_blog {
+.new_blog_1 {
+    font-family : "Times New Roman"; 
     color     : blue;
     font-size : 18px;
+}
+
+.new_blog_2 {
+    font-family : "Times New Roman"; 
+    color     : blue;
+    font-size : 20px;
+}
+
+
+/*show_blog.html*/
+.show_blog_title {
+    font-family : "Times New Roman"; 
+    font-size   : 28;
+}
+
+.show_blog_content {
+    font-family : "Times New Roman"; 
+    font-size   : 25;
 }
 

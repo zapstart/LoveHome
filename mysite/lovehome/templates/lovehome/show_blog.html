@@ -1,18 +1,22 @@
+{% load staticfiles %}
 <html>
     <head>
-        <body>
-            <form>
-            <h1 align="center"><b><font size="7">豆豆 LOVE 琛琛</font></b></h1>
-            <div>
-                <font size="5"><a id="home"  href="{% url 'lovehome:front_page' %}"              style="text-decoration:none">Home&nbsp;&nbsp;</a></font>
-                <font size="5"><a id="edit"  href="{% url 'lovehome:edit_blog'  blog_data.id %}" style="text-decoration:none">Edit</a></font>
-                <font size="5"><a id="delet" href="{% url 'lovehome:delete_blog'  blog_data.id %}" style="text-decoration:none">Delete</a></font>
-            </div>
-            <hr /> 
-            <div><h2 align="center"><b><font size="5">{{ blog_data.title }}</font></b></h2></div>
-            <div><font size="5">{{ blog_data.blog_content|safe }}</font></div>
-            </form>
-        </body>
+        <link rel="stylesheet" type="text/css" href={% static 'lovehome/style.css' %} />
     </head>
+    <body>
+        <h1><strong>豆豆 LOVE 琛琛</strong></h1>
+        <div> 
+            <a class="menu" href="{% url 'lovehome:front_page' %}">Home</a>
+            <a class="menu" href="{% url 'lovehome:edit_blog'  blog_data.id %}">Edit</a>
+            <a class="menu" href="{% url 'lovehome:delete_blog'  blog_data.id %}">Delete</a>
+        </div>
+        <hr /> 
+        <div class="show_blog_title">
+            <h2><strong>{{ blog_data.title }}</strong></h2>
+        </div>
+        <div class="show_blog_content">
+            <p>{{ blog_data.blog_content|safe }}</p>
+        </div>
+    </body>
 </html>
 

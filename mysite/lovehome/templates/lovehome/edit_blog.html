@@ -1,30 +1,24 @@
 {% load staticfiles %}
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href={% static 'lovehome/style.css' %}>
+        <link rel="stylesheet" type="text/css" href={% static 'lovehome/style.css' %} />
     </head>
     <body>
         <form method="POST">
         {% csrf_token %}
-            <h1 align="center"><b>豆豆 LOVE 琛琛</b></h1>
+            <h1><strong>豆豆 LOVE 琛琛</strong></h1>
             <br>
             <br>
-            <div id="edit_blog">
-                <b>EDIT</font></div>
-            </div>
+            <div class="edit_blog_1"><strong>EDIT</strong></div>
             <br>
-            <label>
-                <div>title</div><input type="text" name="title" value={{ blog_data.title }}>   
-            </label>
+            <p class="edit_blog_2">title</p><input type="text" name="title" value={{ blog_data.title }}>   
             <br>
-            <label>
-                <div>blog</div><textarea name="blog">{{ blog_data.blog_content }}</textarea>
-            </label>
+            <p class="edit_blog_2">blog</p><textarea name="blog">{{ blog_data.blog_content }}</textarea>
             <br>
             <br>
             <div>
                 <input type="submit" value="Submit"> 
-                <input type="button" name="Submit" value="Cancle" onclick="javascript:history.go(-1)" />  
+                <input type="button" name="Cancle" value="Cancle" onclick="javascript:history.go(-1)">  
             </div>
         </form>
     </body>
