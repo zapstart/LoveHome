@@ -4,15 +4,25 @@
         <link rel="stylesheet" type="text/css" href="{% static 'lovehome/style.css' %}" />
     </head>
     <body>
-        <h1><strong>豆豆 LOVE 琛琛</strong></h1>
-        <img class="top_picture" src="{% static "lovehome/rdou_ccz.jpg" %}" alt="DD and CC" /> 
+        <h1>豆豆 LOVE 琛琛</h1>
+        <!--<img class="top_picture" src="{% static "lovehome/rdou_ccz.jpg" %}" alt="DD and CC" />--> 
         {% if blog_data %} 
-            <div>
-                <a class="menu" href="{% url 'lovehome:add_blog' %}">新的旅程</a>
+            <ul class="menu"> 
+                <li><a href="{% url 'lovehome:add_blog' %}">NEW STORY</a></li>
+                <li><a href="{% url 'lovehome:add_blog' %}">ABOUT</a></li>
+            </ul>
+            <div class=panel_body> 
+                <div class="latest_articles"> 
+                    <h2>latest article</h2>
+                    <p>articles</p>
+                </div> 
+                <div class="tag"> 
+                    <h2>tags</h2>
+                    <p>articles</p>
+                </div> 
             </div>
-            <hr /> 
             {% for blog in blog_data %} 
-                <div>
+                <div class=blog_info>
                     &nbsp;&nbsp;<strong><a class="blog_title" href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</a></strong>
                     &nbsp;<span class="created_time">(Created at {{blog.b_created_time|date:"m/d/Y H:m"}})</span>
                 </div> 

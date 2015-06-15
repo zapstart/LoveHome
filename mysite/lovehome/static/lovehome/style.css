@@ -1,20 +1,41 @@
 /*front_page.html, edit_blog.html, add_blog.html, show_blog.html*/
 h1 {
-    color      : green;
-    font-size  : 40px;
-    text-align : center;
+    font-size   : 40px;
+    font-weight : bold;
+    margin      : 10px 0;
 }
 
 body {
-    background: white url("bg_gray.gif") right bottom;
+    /*background: white url("bg_gray.gif") right bottom;*/
+    margin : 0 6%;
 }
 
 /*front_page.html, show_blog.html*/
-.menu{
-    font-family     : "Times New Roman"; 
-    color           : green; 
-    text-decoration : none;
-    font-size       : 25px;
+.menu {
+    list-style-type : none;     
+    margin          : 0;
+    padding         : 0;
+    background-color: gray;    
+    width           : auto;
+    height          : 30px;
+    overflow        : hidden;
+}
+
+.menu li {
+    float : left;
+}
+
+.menu li a {
+    font-family      : "Times New Roman"; 
+    font-size        : 15px;
+    display          : block;
+    height           : 30px;
+    width            : 100px;
+    font-weight      : bold;
+    color            : #FFFFFF;
+    text-align       : center;
+    text-decoration  : none;
+    line-height      : 30px; 
 }
 
 /*front_page.html*/
@@ -22,14 +43,36 @@ body {
     height : 128px;  
 }
 
+.panel_body{
+    width : 250px; 
+    height : 100%;
+    position : absolute;
+    top : 20%; 
+    right : 6%;
+    background-color : #bebebe;
+}
+
+.latest_article {
+    /*background-color : green;*/
+    margin : 0 0 20px 0;
+}
+
+.tag {
+    /*background-color : green;*/
+    margin : 20px 0 20px 0;
+}
+
+.blog_info {
+   margin : 2% 0; 
+}
 .blog_title {
-    color           : green; 
+    color           : black; 
     font-size       : 20px;
     text-decoration : none;
 }
 
 .created_time{
-    color           : green; 
+    color           : black; 
     font-size       : 18px;
 }
 
