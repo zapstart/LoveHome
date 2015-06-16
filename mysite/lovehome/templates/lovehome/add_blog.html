@@ -2,25 +2,20 @@
 <html>
     <head>
      <head>
-        <link rel="stylesheet" type="text/css" href={% static 'lovehome/style.css' %} />
+        <link rel="stylesheet" type="text/css" href={% static 'lovehome/add_blog.css' %} />
     </head>
     <body>
         <form method="POST">
         {% csrf_token %}
-            <h1><strong>豆豆 LOVE 琛琛</strong></h1>
-            <br>
-            <br>
-            <div class="new_blog_1">
-                <strong>新的故事</strong>
-            </div>
-            <br>
-            <p class="new_blog_2">title</p>
+            <h1>豆豆 LOVE 琛琛</h1>
+            <ul class="menu"> 
+                <li><a class="menu" href="{% url 'lovehome:front_page' %}">HOME</a></li>
+                <li><a href="{% url 'lovehome:add_blog' %}">ABOUT</a></li>
+            </ul>
+            <p class="new_blog_2">TITLE</p>
             <input type="text" name="title" value={{ title }}>   
-            <br>
-            <p class="new_blog_2">blog</p>
-            <textarea name="blog">{{ blog }}</textarea>
-            <br>
-            <br>
+            <p class="new_blog_2">BLOG</p>
+            <textarea name="blog">{{ blog|linebreaks }}</textarea>
             <div>
                 <input type="submit" value="Submit"> 
                 <input type="button" name="Cancle" value="Cancle" onclick="javascript:history.go(-1)"> 

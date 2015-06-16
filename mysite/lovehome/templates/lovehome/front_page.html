@@ -1,32 +1,42 @@
 {% load staticfiles %}
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'lovehome/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'lovehome/front_page.css' %}" />
     </head>
     <body>
         <h1>豆豆 LOVE 琛琛</h1>
-        <!--<img class="top_picture" src="{% static "lovehome/rdou_ccz.jpg" %}" alt="DD and CC" />--> 
-        {% if blog_data %} 
             <ul class="menu"> 
+                <li><a class="menu" href="{% url 'lovehome:front_page' %}">HOME</a></li>
                 <li><a href="{% url 'lovehome:add_blog' %}">NEW STORY</a></li>
                 <li><a href="{% url 'lovehome:add_blog' %}">ABOUT</a></li>
             </ul>
-            <div class=panel_body> 
-                <div class="latest_articles"> 
-                    <h2>latest article</h2>
-                    <p>articles</p>
-                </div> 
-                <div class="tag"> 
-                    <h2>tags</h2>
-                    <p>articles</p>
-                </div> 
-            </div>
-            {% for blog in blog_data %} 
+                <div class=panel_body> 
+                    <div class="latest_article"> 
+                        <h2>最新故事</h2>
+                        {% for blog in blog_data %} 
+                        <div> 
+                            <a href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</a>
+                        </div> 
+                        {% endfor %}
+                    </div> 
+                    <div class="tag"> 
+                        <h2>分类</h2>
+                        {% for blog in blog_data %} 
+                        <p>articles</p>
+                        {% endfor %}
+                    </div> 
+                </div>
+        {% if blog_data %} 
+                {% for blog in blog_data %} 
                 <div class=blog_info>
-                    &nbsp;&nbsp;<strong><a class="blog_title" href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</a></strong>
-                    &nbsp;<span class="created_time">(Created at {{blog.b_created_time|date:"m/d/Y H:m"}})</span>
+                    <h2><a class="blog_title" href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</a></h2>
+                    <span class="created_time">({{blog.b_created_time|date:"m/d/Y H:m"}})</span>
+                {% autoescape off%}
+                    <p><a class="blog_content" href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.blog_content}}</a></p>
+                {% endautoescape %}
+                    <hr />
                 </div> 
-            {% endfor %}
+                {% endfor %}
         {% else %}
             <P>Sorry, there is no blog right now!!!</P>
         {% endif %}

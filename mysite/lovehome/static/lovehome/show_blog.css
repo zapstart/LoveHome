@@ -1,0 +1,47 @@
+h1 {
+    font-size   : 40px;
+    font-weight : bold;
+    margin      : 10px 0;
+}
+
+body {
+    margin : 0 6%;
+}
+
+.menu {
+    list-style-type : none;     
+    margin          : 0;
+    padding         : 0;
+    background-color: gray;    
+    width           : auto;
+    height          : 30px;
+    overflow        : hidden;
+}
+
+.menu li {
+    float : left;
+}
+
+.menu li a {
+    font-family      : "Times New Roman"; 
+    font-size        : 15px;
+    display          : block;
+    height           : 30px;
+    width            : 100px;
+    font-weight      : bold;
+    color            : #FFFFFF;
+    text-align       : center;
+    text-decoration  : none;
+    line-height      : 30px; 
+}
+
+.show_blog_title {
+    font-family : "Times New Roman"; 
+    font-size   : 25;
+}
+
+.show_blog_content {
+    font-family : "Times New Roman"; 
+    font-size   : 25;
+}
+
