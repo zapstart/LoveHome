@@ -1,11 +1,16 @@
-h1 {
-    font-size   : 40px;
-    font-weight : bold;
-    margin      : 10px 0;
+body {
+    font-family : "Microsoft Yahei"; 
 }
 
-body {
-    margin : 0 6%;
+h1 {
+    font-size   : 50px;
+    font-weight : bold;
+    margin      : 40px 0 0 0;
+    text-align  : left; 
+}
+
+.blog_main {
+    margin : 0 26% 0 10%;
 }
 
 .menu {
@@ -45,3 +50,22 @@ body {
     font-size   : 25;
 }
 
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+/* Nav links */
+.blog-nav-item {
+    font-family : "Microsoft Yahei"; 
+    position    : relative;
+    display     : inline-block;
+    padding     : 10px;
+    font-weight : bold;
+    color       : #CDDDEB;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}

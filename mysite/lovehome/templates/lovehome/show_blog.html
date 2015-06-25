@@ -1,21 +1,29 @@
 {% load staticfiles %}
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href={% static 'lovehome/show_blog.css' %} />
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'lovehome/lib/bootstrap/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'lovehome/show_blog.css' %}" >
     </head>
     <body>
-        <h1>豆豆 LOVE 琛琛</h1>
-        <ul class="menu"> 
-            <li><a class="menu" href="{% url 'lovehome:front_page' %}">HOME</a></li>
-            <li><a class="menu" href="{% url 'lovehome:edit_blog'  blog_data.id %}">EDIT</a><li>
-            <li><a class="menu" href="{% url 'lovehome:delete_blog'  blog_data.id %}">DELETE</a><li>
-            <li><a href="{% url 'lovehome:add_blog' %}">ABOUT</a></li>
-        </ul>
-        <div class="show_blog_title">
-            <h2>{{ blog_data.title }}</h2>
+       <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="{% url 'lovehome:front_page' %}">HOME</a>
+                    <a class="blog-nav-item" href="{% url 'lovehome:edit_blog' blog_data.id %}">EDIT</a>
+                    <a class="blog-nav-item" href="{% url 'lovehome:delete_blog' blog_data.id %}">DELETE</a>
+                    <a class="blog-nav-item" href="{% url 'lovehome:add_blog' %}">ABOUT</a>
+                </nav>
+            </div>
         </div>
-        <div class="show_blog_content">
-            <p>{{ blog_data.blog_content|safe }}</p>
+        <div class="blog_main">
+            <h1>豆豆 LOVE 琛琛</h1>
+            <div class="show_blog_title">
+                <h2>{{ blog_data.title }}</h2>
+            </div>
+            <div class="show_blog_content">
+                <p>{{ blog_data.blog_content|safe }}</p>
+            </div>
         </div>
     </body>
 </html>

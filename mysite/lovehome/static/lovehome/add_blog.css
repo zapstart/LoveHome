@@ -1,60 +1,56 @@
-h1 {
-    font-size   : 40px;
-    font-weight : bold;
-    margin      : 10px 0;
-}
-
 body {
-    margin : 0 6%;
+    font-family : "Microsoft Yahei"; 
 }
 
-.menu {
-    list-style-type : none;     
-    margin          : 0;
-    padding         : 0;
-    background-color: gray;    
-    width           : auto;
-    height          : 30px;
-    overflow        : hidden;
+h1 {
+    font-size   : 50px;
+    font-weight : bold;
+    margin      : 40px 0 30px 0;
+    text-align  : left; 
 }
 
-.menu li {
-    float : left;
+.blog_main {
+    margin : 0 26% 0 10%;
 }
 
-.menu li a {
-    font-family      : "Times New Roman"; 
-    font-size        : 15px;
-    display          : block;
-    height           : 30px;
-    width            : 100px;
-    font-weight      : bold;
-    color            : #FFFFFF;
-    text-align       : center;
-    text-decoration  : none;
-    line-height      : 30px; 
-}
-
-.new_blog_1 {
-    font-family : "Times New Roman"; 
-    font-size : 16px;
+.new_blog {
+    font-size   : 16px;
     line-height : 0.5;
-    font-weight      : bold;
-}
-
-.new_blog_2 {
-    font-family : "Times New Roman"; 
-    font-size : 16px;
-    line-height : 0.5;
-    font-weight      : bold;
+    font-weight : bold;
 }
 
 textarea {
     font-size : 15px;
-    width : 100%;
-    height : 300px;
+    width     : 100%;
+    height    : 300px;
+    margin    : 5px 0 0 0;
 }
 
 input {
+    margin    : 5px 0 10px 0;
     font-size : 15px;
+}
+
+button {
+    margin : 10px 10px 0 0;
+    width  : 80px;
+}
+
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+/* Nav links */
+.blog-nav-item {
+    position    : relative;
+    display     : inline-block;
+    padding     : 10px;
+    font-weight : bold;
+    color       : #CDDDEB;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
 }

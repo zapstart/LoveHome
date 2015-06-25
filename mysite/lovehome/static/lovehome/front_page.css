@@ -1,51 +1,16 @@
-h1 {
-    font-size   : 40px;
-    font-weight : bold;
-    margin      : 10px 0;
-}
-
 body {
-    margin : 0 6%;
+    font-family : "Microsoft Yahei"; 
 }
 
-.menu {
-    list-style-type : none;     
-    margin          : 0;
-    padding         : 0;
-    background-color: gray;    
-    width           : auto;
-    height          : 30px;
-    overflow        : hidden;
+h1 {
+    font-size   : 50px;
+    font-weight : bold;
+    margin      : 40px 0 30px 0;
+    text-align  : left; 
 }
 
-.menu li {
-    float : left;
-}
-
-.menu li a {
-    font-family      : "Times New Roman"; 
-    font-size        : 15px;
-    display          : block;
-    height           : 30px;
-    width            : 100px;
-    font-weight      : bold;
-    color            : #FFFFFF;
-    text-align       : center;
-    text-decoration  : none;
-    line-height      : 30px; 
-}
-
-.top_picture {
-    height : 128px;  
-}
-
-.panel_body{
-    width : 250px; 
-    height : 100%;
-    position : absolute;
-    top : 20%; 
-    right : 6%;
-    background-color : #bebebe;
+.blog_main {
+    margin : 0 26% 0 10%;
 }
 
 .latest_article {
@@ -54,12 +19,13 @@ body {
 }
 
 .latest_article h2 {
+    font-size   : 20px; 
     text-align : left; 
 }
 
 .latest_article a {
-    font-family      : "Times New Roman"; 
     font-size        : 16px;
+    color : black;
     text-align : left; 
     width : 240px;
     word-wrap : break-word;
@@ -72,17 +38,21 @@ body {
 }
 
 .tag h2 {
-   text-align : left; 
+    font-size   : 20px; 
+    text-align  : left; 
 }
 
-.tag p {
-   text-align : left; 
-   line-height : 0.3;
+.tag a {
+    font-size        : 16px;
+    color : black;
+    text-align : left; 
+    line-height : 0.3;
+    text-decoration : none;
 }
 
 .blog_info {
     margin : 2% 0; 
-    width : 70%;
+    width  : 90%;
 }
 
 .blog_title {
@@ -104,3 +74,35 @@ body {
     font-size       : 15px;
 }
 
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+/* Nav links */
+.blog-nav-item {
+    position    : relative;
+    display     : inline-block;
+    padding     : 10px;
+    font-weight : bold;
+    color       : #CDDDEB;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color          : #fff;
+  text-decoration: none;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+    width    : 250px; 
+    height   : 100%;
+    position : absolute;
+    top      : 20%; 
+    right    : 6%;
+}
+
+.sidebar-module a {
+    color     : black;
+    font-size : 13px;
+}

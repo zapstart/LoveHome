@@ -17,35 +17,35 @@
         </div>
         <div class="blog_main">
             <h1>豆豆 LOVE 琛琛</h1>
-            {% if blog_data %} 
-                {% for blog in blog_data %} 
-                    <div class=blog_info>
-                        <h2><a class="blog_title" href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</a></h2>
-                        <span class="created_time">({{blog.b_created_time|date:"m/d/Y H:m"}})</span>
-                    {% autoescape off%}
-                        <p>{{ blog.blog_content}}</p>
-                    {% endautoescape %}
-                        <hr />
-                    </div> 
+            {% if blog_year %} 
+                {% for blog in blog_year %} 
+                <div class=blog_info>
+                    <h2><a class="blog_title" href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</a></h2>
+                    <span class="created_time">({{blog.b_created_time|date:"m/d/Y H:m"}})</span>
+                {% autoescape off%}
+                    <p><a class="blog_content" href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.blog_content}}</a></p>
+                {% endautoescape %}
+                    <hr />
+                </div> 
                 {% endfor %}
             {% else %}
                 <P>Sorry, there is no blog right now!!!</P>
             {% endif %}
         </div>
-        <div class="sidebar-module">
+        <div class="sidebar-module"> 
             <h3>最新故事</h3>
             <ul class="list-unstyled">
                 {% for blog in blog_data %} 
                     <li><a href="{% url 'lovehome:blog_page' blog.id %}">{{ blog.title}}</a></li>
                 {% endfor %}
             </ul>
-            <br>
-            <h3>时间</h3>
+            <h3>分类</h3>
             <ul class="list-unstyled">
-                {% for year in time_category%} 
-                    <li><a href="{% url 'lovehome:time_category' year%}">{{ year }}</a></li> 
+                {% for year in time_category %} 
+                    <li><a href="{% url 'lovehome:time_category' year %}">{{ year }}</a></li>
                 {% endfor %}
             </ul>
         </div> 
     </body>
 </html>
+            
